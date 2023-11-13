@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dice Game</title>
+    <style>
+        #game-info {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Dice Game</h1>
+
+    <div>
+        <label for="rounds">Number of Rounds:</label>
+        <input type="text" id="rounds" placeholder="Enter number of rounds">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div>
+        <div id="player1">
+            <h2>Player 1</h2>
+            <p>Score: <span id="score1">0</span></p>
+            <p>Number of Rounds Won: <span id="rounds1">0</span></p>
+        </div>
+        <div id="player2">
+            <h2>Player 2</h2>
+            <p>Score: <span id="score2">0</span></p>
+            <p>Number of Rounds Won: <span id="rounds2">0</span></p>
+        </div>
+    </div>
+
+    <div id="dice" style="display: none;">
+        <h2>Dice</h2>
+        <p id="dice-result"></p>
+        <button id="dice-button" onclick="rollToDecideFirstPlayer()">Roll to Decide First Player</button>
+    </div>
+
+    <div>
+        <p>Total Rounds: <span id="total-rounds">0</span></p>
+        <p>Current Round: <span id="current-round">0</span></p>
+        <p>Current Round Data: <span id="round-data">n/a</span></p>
+    </div>
+
+    <button onclick="startGame();">Replay Game</button>
+
+    <script src="js/boston.js"></script>
+
+</body>
+</html>
